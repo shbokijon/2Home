@@ -12,10 +12,13 @@ import Step2PhotoId from '../screens/onboarding/Step2PhotoId';
 import Step3ProfessionalInfo from '../screens/onboarding/Step3ProfessionalInfo';
 import Step4ServiceArea from '../screens/onboarding/Step4ServiceArea';
 import Step5Pricing from '../screens/onboarding/Step5Pricing';
-// TODO: Import remaining steps (6, 7, 8, 9)
+import Step6Schedule from '../screens/onboarding/Step6Schedule';
+import Step7Certifications from '../screens/onboarding/Step7Certifications';
+import Step8Payment from '../screens/onboarding/Step8Payment';
+import Step9Terms from '../screens/onboarding/Step9Terms';
 
 // Dashboard
-// import DashboardScreen from '../screens/dashboard/DashboardScreen';
+import PendingApprovalScreen from '../screens/dashboard/PendingApprovalScreen';
 
 const Stack = createStackNavigator();
 
@@ -50,7 +53,17 @@ export const AppNavigator = () => {
               component={Step4ServiceArea}
             />
             <Stack.Screen name="Step5Pricing" component={Step5Pricing} />
-            {/* TODO: Add remaining step screens */}
+            <Stack.Screen name="Step6Schedule" component={Step6Schedule} />
+            <Stack.Screen
+              name="Step7Certifications"
+              component={Step7Certifications}
+            />
+            <Stack.Screen name="Step8Payment" component={Step8Payment} />
+            <Stack.Screen name="Step9Terms" component={Step9Terms} />
+            <Stack.Screen
+              name="PendingApproval"
+              component={PendingApprovalScreen}
+            />
           </>
         )}
       </Stack.Navigator>
